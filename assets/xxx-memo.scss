@@ -1,0 +1,173 @@
+/* -----------------------------------
+  xxx-memo.scss
+  これはmemoです。反映はされません
+-----------------------------------
+
+色反転等
+mix-blend-normal
+mix-blend-lighten
+mix-blend-overlay
+mix-blend-multiply
+
+mix-blend-exclusion
+mix-blend-difference
+
+cursor-default
+cursor-pointer
+
+block	         display: block;
+inline-block	 display: inline-block;
+inline	       display: inline;
+flex	         display: flex;
+grid	         display: grid;
+inline-grid	   display: inline-grid;
+contents       display: contents;
+list-item	     display: list-item;
+hidden	       display: none;
+
+flex-row	
+flex-row-reverse	
+flex-col	
+flex-col-reverse
+
+
+justify-normal	justify-content: normal;
+justify-start	  justify-content: flex-start;
+justify-end    	justify-content: flex-end;
+justify-center	justify-content: center;
+justify-between	justify-content: space-between;
+justify-around	justify-content: space-around;
+justify-evenly	justify-content: space-evenly;
+justify-stretch	justify-content: stretch;
+
+items-start    	align-items: flex-start;
+items-end      	align-items: flex-end;
+items-center	  align-items: center;
+items-baseline	align-items: baseline;
+items-stretch	  align-items: stretch;
+
+flex-wrap
+flex-wrap-reverse	
+flex-nowrap	
+
+basis-X	
+
+flex-1	       flex: 1 1 0%;
+flex-auto	     flex: 1 1 auto;
+flex-initial 	 flex: 0 1 auto;
+flex-none	     flex: none;
+
+----------------------------------- */
+
+$fore1   : #000000;
+$main0   : #000000;
+$main1   : #000000;
+$main2   : #000000;
+$main3   : #000000;
+$accent1 : #000000;
+$accent2 : #000000;
+$info    : #000000;
+$link    : #000000;
+$download: #000000;
+$success : #000000;
+$warning : #000000;
+$error   : #000000;
+
+.flextemplate {
+  display        : flex;
+  justify-content: center;
+  align-items    : center;
+  // --------
+  display        : flex;
+  flex-direction : row;
+  flex-wrap      : nowrap;
+  justify-content: flex-start;
+  align-items    : center;
+  // --------
+  //子要素の並ぶ向き
+  flex-direction : row;
+  flex-direction : row-reverse;
+  flex-direction : column;
+  flex-direction : column-reverse;
+  // 子要素の折り返し
+  flex-wrap      : nowrap;
+  flex-wrap      : wrap;
+  flex-wrap      : wrap-reverse;
+  // 水平方向の揃え
+  justify-content: flex-start;
+  justify-content: flex-end;
+  justify-content: center;
+  justify-content: space-between;
+  justify-content: space-around;
+  // 垂直方向の揃え
+  align-items    : stretch;
+  align-items    : flex-start;
+  align-items    : flex-end;
+  align-items    : center;
+  align-items    : baseline;
+  // 複数行にした時の揃え
+  align-content  : space-between;
+
+  // --------
+  .item1 {
+    flex       : 0 1 auto;
+    // --------
+    order      : 0;
+    order      : 1;
+    // --------
+    flex-grow  : 0;
+    flex-grow  : 1;
+    // --------
+    flex-shrink: 0;
+    flex-shrink: 1;
+    // --------
+    flex-basis : auto;
+    flex-basis : 200px;
+    flex-basis : 30%;
+    // --------
+    align-self : flex-end;
+  }
+}
+
+
+
+.media {
+
+  // sm: '640px',
+  // md: '768px',
+  // lg: '1024px',
+  // xl: '1280px',
+  // '2xl': '1536px',
+
+
+  // sm 640
+  @media screen and (min-width: #{ 0 }px) and (max-width: #{ 640 - 0.1}px) {
+    //
+  }
+
+  // md 768
+  @media screen and (min-width: #{ 0 }px) and (max-width: #{ 768 - 0.1}px) {
+    //
+  }
+
+  // lg 1024
+  @media screen and (min-width: #{ 0 }px) and (max-width: #{ 1024 - 0.1}px) {
+    //
+  }
+
+  // xl 1280
+  @media screen and (min-width: #{ 0 }px) and (max-width: #{ 1280 - 0.1}px) {
+    //
+  }
+
+  // 2xl 1536
+  @media screen and (min-width: #{ 0 }px) and (max-width: #{ 1536 - 0.1}px) {
+    //
+  }
+
+}
+
+.fontawoseme {
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+}
