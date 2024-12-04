@@ -13,7 +13,19 @@ const env: 'development' | 'staging' | 'production' = (() => {
 })();
 
 type Modules = Parameters<typeof defineNuxtConfig>[0]['modules'];
-const modules: Modules = [];
+// ----------------------------------
+const modules: Modules = [
+  [
+    '@nuxt/eslint',
+    {
+      checker: true,
+    },
+  ],
+  '@pinia/nuxt',
+  '@nuxtjs/tailwindcss',
+  '@vueuse/nuxt',
+  '@nuxt/image',
+];
 // ----------------------------------
 // Google Analytics
 const gtagId = String(process.env.GOOGLE_GTAG);
@@ -47,20 +59,7 @@ export default defineNuxtConfig({
   nitro: {
     preset: 'vercel',
   },
-  modules: [
-    //
-    [
-      '@nuxt/eslint',
-      {
-        checker: true,
-      },
-    ],
-    '@pinia/nuxt',
-    '@nuxtjs/tailwindcss',
-    '@vueuse/nuxt',
-    '@nuxt/image',
-    ...modules,
-  ],
+  modules: modules,
 
   runtimeConfig: {
     startAt: dayjs().format(),
